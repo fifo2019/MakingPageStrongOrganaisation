@@ -1,0 +1,92 @@
+@font-face {
+    font-family: OpenSans-Regular;
+    src: url('../fonts/OpenSans/OpenSans-Regular.ttf');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: OpenSans-Semibold;
+    src: url('../fonts/OpenSans/OpenSans-Semibold.ttf');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: OpenSans-Bold;
+    src: url('../fonts/OpenSans/OpenSans-Bold.ttf');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: OpenSans-ExtraBold;
+    src: url('../fonts/OpenSans/OpenSans-ExtraBold.ttf');
+    font-weight: 800;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header.header-wrp {
+    max-width: 1582px;
+    margin: 0 auto;
+    padding: 31px 166px 111px;
+    box-sizing: border-box;
+    background-color: #F6F2F2;
+}
+
+div.header-nav-wrp {
+    max-width: 1249px;
+    background-color: #000000;
+    mix-blend-mode: normal;
+    opacity: 0.8;
+}
+
+li.nav-item-link {
+    list-style: none;
+}
+
+li.nav-item-link a {
+    font-family: OpenSans-Bold;
+    font-size: 14px;
+    line-height: 24px;
+    text-transform: uppercase;
+    letter-spacing: 0.035em;
+    color: #e0e0e0;
+    text-decoration: none;
+}
+
+div.header-video-wrp {
+    max-width: 551px;
+    min-height: 356px;
+    position: relative;
+}
+
+div.header-video-wrp::after {
+    content: '';
+    width: 70px;
+    height: 69px;
+    background-image: url('../img/header-video-play-icon.png');
+    object-fit: fill;
+    position: absolute;
+    top: 144px;
+    left: 241px;
+    transition: 0.3s;
+}
+
+div.header-video-wrp:hover:after {
+    transform: scale(1.2);
+}
+
+div.header-video-wrp:active:after {
+    transform: none;
+}
+
+video.header-video {
+    opacity: 0.2;
+    background-color: #000000;
+}
