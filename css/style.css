@@ -32,7 +32,7 @@
 }
 
 header.header-wrp {
-    max-width: 1582px;
+    max-width: 1577px;
     margin: 0 auto;
     padding: 31px 166px 111px;
     box-sizing: border-box;
@@ -44,26 +44,94 @@ div.header-nav-wrp {
     background-color: #000000;
     mix-blend-mode: normal;
     opacity: 0.8;
+    margin: 0 0 103px 0;
+}
+
+nav.nav-wrp {
+    text-align: center;
 }
 
 li.nav-item-link {
     list-style: none;
+    display: inline-block;
+    padding: 44px 23px 33px;
+    box-sizing: border-box;
+}
+
+li.nav-item-link:hover {
+    background-color: #f31819;
+}
+
+li.nav-item-link:active {
+    background-color: #ff3f40;
 }
 
 li.nav-item-link a {
     font-family: OpenSans-Bold;
     font-size: 14px;
-    line-height: 24px;
     text-transform: uppercase;
     letter-spacing: 0.035em;
     color: #e0e0e0;
     text-decoration: none;
 }
 
+div.header-info {
+    display: inline-block;
+    margin: 0 102px 0 0;
+    vertical-align: top;
+}
+
+h1.header-info-title {
+    max-width: 588px;
+    font-family: OpenSans-ExtraBold;
+    font-size: 60px;
+    line-height: 72px;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+    color: #000000;
+    margin: 0 0 15px 0;
+}
+
+p.header-info-text {
+    max-width: 512px;
+    opacity: 0.7;
+    font-family: OpenSans-Regular;
+    font-size: 16px;
+    line-height: 28px;
+    color: #000000;
+    margin: 0 0 46px 0;
+}
+
+a.header-info-btn {
+    width: 227px;
+    display: block;
+    font-family: OpenSans-Bold;
+    font-size: 18px;
+    letter-spacing: 0.025em;
+    color: #ffffff;
+    padding: 15px;
+    box-sizing: border-box;
+    background-color: #ff2d2d;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    margin: 0 0 20px 0;
+}
+
+a.header-info-btn:hover {
+    background-color: #ffffff;
+    color: #ff2d2d;
+    border: 1px solid #ff2d2d;
+}
+
+a.header-info-btn:active {
+    background-color: #ff2d2d;
+    color: #ffffff;
+}
+
 div.header-video-wrp {
-    max-width: 551px;
-    min-height: 356px;
     position: relative;
+    display: inline-block;
 }
 
 div.header-video-wrp::after {
@@ -86,7 +154,7 @@ div.header-video-wrp:active:after {
     transform: none;
 }
 
-video.header-video {
+img.header-video {
     opacity: 0.2;
     background-color: #000000;
 }
