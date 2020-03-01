@@ -31,29 +31,50 @@
     padding: 0;
 }
 
-header.header-wrp {
-    max-width: 1577px;
-    margin: 0 auto;
-    padding: 31px 166px 111px;
-    box-sizing: border-box;
-    background-color: #F6F2F2;
+html,
+body {
+    height: 100%;
 }
 
-div.header-nav-wrp {
+div.container {
+    max-width: 1577px;
+    min-height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header.header-wrp {
+    width: 100%;
+    padding: 29px 10px 111px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    background-color: #F6F2F2;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+nav.header-nav-wrp {
     max-width: 1249px;
+    min-height: 89px;
+    width: 100%;
     background-color: #000000;
     mix-blend-mode: normal;
     opacity: 0.8;
     margin: 0 0 103px 0;
 }
 
-nav.nav-wrp {
-    text-align: center;
+ul.nav-wrp {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 li.nav-item-link {
     list-style: none;
-    display: inline-block;
     padding: 44px 23px 33px;
     box-sizing: border-box;
 }
@@ -75,14 +96,18 @@ li.nav-item-link a {
     text-decoration: none;
 }
 
+div.header-info-wrp {
+    max-width: 1249px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
 div.header-info {
-    display: inline-block;
-    margin: 0 102px 0 0;
-    vertical-align: top;
+    max-width: 558px;
 }
 
 h1.header-info-title {
-    max-width: 588px;
     font-family: OpenSans-ExtraBold;
     font-size: 60px;
     line-height: 72px;
@@ -90,6 +115,7 @@ h1.header-info-title {
     letter-spacing: 0.025em;
     color: #000000;
     margin: 0 0 15px 0;
+    word-break: break-word;
 }
 
 p.header-info-text {
@@ -100,6 +126,7 @@ p.header-info-text {
     line-height: 28px;
     color: #000000;
     margin: 0 0 46px 0;
+    word-break: break-word;
 }
 
 a.header-info-btn {
@@ -115,13 +142,12 @@ a.header-info-btn {
     border-radius: 5px;
     text-align: center;
     text-decoration: none;
-    margin: 0 0 20px 0;
+    border: 1px solid #ff2d2d;
 }
 
 a.header-info-btn:hover {
     background-color: #ffffff;
     color: #ff2d2d;
-    border: 1px solid #ff2d2d;
 }
 
 a.header-info-btn:active {
@@ -129,32 +155,102 @@ a.header-info-btn:active {
     color: #ffffff;
 }
 
-div.header-video-wrp {
+div.header-img-wrp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../img/header_video_img_plug.png");
+    width: 551px;
+    height: 356px;
+    text-decoration: none;
+    opacity: 0.2;
     position: relative;
-    display: inline-block;
 }
 
-div.header-video-wrp::after {
-    content: '';
-    width: 70px;
-    height: 69px;
-    background-image: url('../img/header-video-play-icon.png');
-    object-fit: fill;
-    position: absolute;
-    top: 144px;
-    left: 241px;
+img.header-img-play-btn {
     transition: 0.3s;
 }
 
-div.header-video-wrp:hover:after {
+img.header-img-play-btn:hover {
     transform: scale(1.2);
 }
 
-div.header-video-wrp:active:after {
+img.header-img-play-btn:active {
     transform: none;
 }
 
-img.header-video {
-    opacity: 0.2;
-    background-color: #000000;
+
+
+@media screen and (max-width: 1120px) {
+    div.header-info {
+        width: 50vw;
+    }
+
+    h1.header-info-title {
+        font-size: 5vw;
+        line-height: 6vw;
+    }
+
+    p.header-info-text {
+        width: 39vw;
+        font-size: 1.5vw;
+        line-height: 2.5vh;
+        margin: 0 0 18px 0;
+    }
+
+    div.header-img-wrp {
+        width: 50vw;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    nav.header-nav-wrp {
+        margin: 0 0 40px 0;
+    }
+
+    div.header-info-wrp {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    div.header-info {
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h1.header-info-title {
+        font-size: 7vw;
+        text-align: center;
+    }
+
+    p.header-info-text {
+        width: 89vw;
+        font-size: 3vw;
+        line-height: 3vh;
+        margin: 0 0 18px 0;
+        text-align: center;
+    }
+
+    a.header-info-btn {
+        margin: 0 0 40px 0;
+    }
+
+    div.header-img-wrp {
+        width: 100vw;
+        height: 32vh;
+    }
+}
+
+@media screen and (max-width: 568px) {
+    ul.nav-wrp {
+        display: none;
+    }
+
+    a.header-info-btn {
+        width: 38vw;
+        font-size: 3vw;
+    }
 }
