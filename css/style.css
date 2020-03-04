@@ -262,7 +262,7 @@ body {
 .provide__tools_info-wrp {
     max-width: 290px;
     width: 100%;
-    margin: 0 auto 50px;
+    margin: 0 0 50px;
 }
 
 .provide__tools_info-icon {
@@ -334,11 +334,11 @@ body {
     .provide__info-btn {
         width: 19.5vw;
         padding: 1.5vw;
-        margin: 0 0 15px 0;
     }
 
     .provide__tools_info-wrp {
         max-width: 400px;
+        margin: 0 auto 50px;
     }
 }
 
@@ -410,10 +410,6 @@ body {
         line-height: 1.6em;
         margin: 0 0 15px 0;
         text-align: center;
-    }
-
-    .provide__info-btn {
-        padding: 10px;
     }
 }
 
