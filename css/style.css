@@ -664,6 +664,7 @@ body {
 .design__form-btn:active {
     background-color: #ff2d2d;
     color: #ffffff;
+    outline: none;
 }
 
 .get-wrp {
@@ -760,7 +761,7 @@ body {
     color: #000000;
 }
 
-.get__form-text:first-child {
+.get__form-text:nth-child(1) {
     margin: 0 51px 46px 0;
 }
 
